@@ -124,7 +124,9 @@ async function run() {
 }
 
 run().catch(console.dir);
-
+app.get('/',async(req,res)=>{
+  res.send('home')
+})
 app.listen(port, () => {
   console.log(`Server listening on port ${port}`);
 });
